@@ -1,191 +1,244 @@
-<section class="section-white-calcuator"><div class="_1300px-container new-conatiner"></div><div data-w-id="de60f5a9-3758-adac-a3fd-7350c3f4d872" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="caluculator-right-side center-white-calc"><div class="calucualtor-heading"><h3 class="heading-three _23">Revenue calculator</h3><h2 class="heading-two font-small">Hhhow much revenue can You make!</h2><p class="banner-para pargrarph black-text">Even if you are a seasoned entrepreneur or starting from scratch, We will empower you to succeed.</p></div><div class="custom-html"><div class="w-embed w-script"><div class="slider-container">
-    <label for="customerRange">Estimate Numbers of Customers</label>
-    <p><span id="customerValue">499</span> Customers</p>
-    <input type="range" min="0" max="499" value="299" class="range-slider" id="customerRange">
-</div>
+<section class="section-white-calcuator">
+    <div class="_1300px-container new-conatiner"></div>
+    <div data-w-id="de60f5a9-3758-adac-a3fd-7350c3f4d872" style="
+      opacity: 1;
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      transform-style: preserve-3d;
+    " class="caluculator-right-side center-white-calc">
+        <div class="calculator-heading">
+            <h3 class="heading-three _23">Revenue calculator</h3>
+            <h2 class="heading-two font-small">Simulate your earnings</h2>
+            <p class="banner-para pargrarph black-text">
+                Even if you are a seasoned entrepreneur or starting from scratch, We
+                will empower you to succeed.
+            </p>
+        </div>
+        <div class="custom-html">
+            <div class="w-embed w-script">
+                <div class="slider-container">
+                    <label for="customerRange">Campaigns Per Month</label>
+                    <p><span id="customerValue">199</span> Campaigns</p>
+                    <input type="range" min="5" max="500" value="299" class="range-slider" id="customerRange" />
+                </div>
 
-<div class="slider-container">
-    <label for="amountRange">What will you charge per month</label>
-    <span class="doller">$</span>
-    <p><span id="amountValue">999</span></p>
-    <input type="range" min="1" max="999" step="1" value="249" class="range-slider" id="amountRange">
-</div>
+                <div class="slider-container">
+                    <label for="amountRange">Total Reach</label>
+                    <!-- <span class="doller"></span> -->
 
-<div class="income-container">
-    <div class="column">
-            <p><span class="ddd">$</span><span id="calculatedAmountMonthly">498,501</span></p>
-        <h3>Monthly Income</h3>
+                    <p> <span style="color: #0773c4;">$</span><span id="amountValue">999</span></p>
+                    <input type="range" min="500" max="1000000" step="1" value="699" class="range-slider"
+                        id="amountRange" />
+                </div>
 
+                <div class="income-container">
+                    <div class="column">
+                        <p>
+                            <span class="ddd">$</span><span id="calculatedAmountMonthly">498,501</span>
+                        </p>
+                        <h3>Monthly Income</h3>
+                    </div>
+                    <!-- <div class="column">
+                        <p>
+                            <span class="ddd">$</span><span id="calculatedAmountAnnual">5,982,012</span>
+                        </p>
+                        <h3>Annual Income</h3>
+                    </div> -->
+                </div>
+
+                <style>
+                    .calculator-heading {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .heading-three {
+                        color: #0773c4;
+                    }
+
+                    .income-container {
+
+                        max-width: 701px;
+                        margin: 0 auto;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                    }
+
+                    .income-container .column {
+                        text-align: center;
+                    }
+
+                    .income-container .column h3 {
+                        margin-top: 0px;
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+
+                    .income-container .column p {
+                        font-size: 26px;
+                        margin-bottom: 18px;
+                        margin-top: 10px;
+                        font-weight: 800;
+                    }
+
+                    .slider-container {
+                        position: relative;
+                    }
+
+                    span.doller {
+                        font-size: 19px;
+                        position: absolute;
+                        left: -50px;
+                        right: 0;
+                        color: #0773c4;
+                    }
+
+                    .slider-container {
+                        text-align: center;
+                        margin-bottom: 31px;
+                    }
+
+                    div#totalAmount {
+                        text-align: center;
+                    }
+
+                    .slider-container label {
+                        color: #323232;
+                        font-size: 25px;
+                        font-weight: 500;
+                        margin-bottom: 19px;
+                    }
+
+                    .slider-container p {
+                        font-size: 19px;
+                        margin: 19px 0;
+                    }
+
+                    span#customerValue {
+                        color: #d93af6;
+                        font-weight: 600;
+                    }
+
+                    span#amountValue {
+                        color: #0773c4;
+                    }
+
+                    .slider-container input {
+                        margin-top: 11px;
+                        width: 81%;
+                    }
+
+                    span#calculatedAmount {
+                        font-size: 39px;
+                        margin-top: 56px;
+                        display: block;
+                        font-weight: 600;
+                        color: #000;
+                    }
+
+                    span#calculatedAmount {
+                        font-size: 39px;
+                        margin-top: 56px;
+                        display: block;
+                        font-weight: 600;
+                        color: #000;
+                    }
+
+                    @media (max-width: 480px) {
+                        .income-container {
+                            flex-direction: column;
+                        }
+
+                        .column {
+                            padding-bottom: 5px;
+                        }
+
+                        .income-container .column p {
+                            font-size: 23px;
+                        }
+
+                        .section-white-calcuator {
+                            padding-bottom: 25px;
+                        }
+
+                        .slider-container label {
+                            color: #323232;
+                            font-size: 18px;
+                            font-weight: 500;
+                            margin-bottom: 19px;
+                            line-height: 28px;
+                        }
+
+                        span#calculatedAmount {
+                            font-size: 26px;
+                            margin-top: 29px;
+                            display: block;
+                            font-weight: 600;
+                            color: #000;
+                            margin-bottom: -9px;
+                        }
+
+                        .slider-container p {
+                            margin-bottom: 0;
+                        }
+                    }
+                </style>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const customerRange = document.getElementById("customerRange");
+                        const customerValue = document.getElementById("customerValue");
+                        const amountRange = document.getElementById("amountRange");
+                        const amountValue = document.getElementById("amountValue");
+                        const calculatedAmountMonthly = document.getElementById(
+                            "calculatedAmountMonthly"
+                        );
+                        const calculatedAmountAnnual = document.getElementById(
+                            "calculatedAmountAnnual"
+                        );
+
+                        function updateValue(slider, display) {
+                            display.textContent = slider.value;
+                        }
+
+                        function formatNumber(number) {
+                            const formattedNumber = number.toLocaleString("en-US");
+                            return formattedNumber;
+                        }
+
+                        function calculateTotal() {
+                            const customerAmount = parseFloat(customerRange.value);
+                            const amount = parseFloat(amountRange.value);
+
+                            // Calculate monthly income
+                            const monthlyIncome = customerAmount * amount;
+                            calculatedAmountMonthly.textContent = formatNumber(monthlyIncome);
+
+                            // Calculate annual income (assuming 12 months in a year)
+                            const annualIncome = monthlyIncome * 12;
+                            calculatedAmountAnnual.textContent = formatNumber(annualIncome);
+                        }
+
+                        customerRange.addEventListener("input", function () {
+                            updateValue(this, customerValue);
+                            calculateTotal();
+                        });
+
+                        amountRange.addEventListener("input", function () {
+                            updateValue(this, amountValue);
+                            calculateTotal();
+                        });
+
+                        // Initial value update
+                        updateValue(customerRange, customerValue);
+                        updateValue(amountRange, amountValue);
+                        calculateTotal();
+                    });
+                </script>
+            </div>
+        </div>
     </div>
-    <div class="column">
-            <p><span class="ddd">$</span><span id="calculatedAmountAnnual">5,982,012</span></p>
-        <h3>Annual Income</h3>
-
-    </div>
-</div>
-
-<style>
-.income-container {
-    display: flex;
-    max-width: 701px;
-    margin: 0 auto;
-    justify-content: space-between;
-    width: 100%;
-}
-.income-container .column {
-    text-align: center;
-}
-.income-container .column h3 {
-    margin-top: 0px;
-    font-size: 20px;
-    font-weight: 400;
-}
-.income-container .column p {
-    font-size: 26px;
-    margin-bottom: 18px;
-    margin-top: 10px;
-    font-weight: 800;
-}
-.slider-container {
-    position: relative;
-}
-span.doller {
-    font-size: 19px;
-    position: absolute;
-    left: -50px;
-    right: 0;
-    color: #0773C4;
-}
-.slider-container {
-    text-align: center;
-    margin-bottom: 31px;
-}
-div#totalAmount {
-    text-align: center;
-}
-
-.slider-container label {
-    color: #323232;
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 19px;
-}
-.slider-container p {
-    font-size: 19px;
-    margin: 19px 0;
-}
-span#customerValue {
-    color: #D93AF6;
-    font-weight: 600;
-}
-span#amountValue {
-    color: #0773C4;
-}
-.slider-container input {
-    margin-top: 11px;
-    width: 81%;
-}
-span#calculatedAmount {
-    font-size: 39px;
-    margin-top: 56px;
-    display: block;
-    font-weight: 600;
-    color: #000;
-}
-span#calculatedAmount {
-    font-size: 39px;
-    margin-top: 56px;
-    display: block;
-    font-weight: 600;
-    color: #000;
-}
-@media(max-width:480px){
-.income-container {
-    flex-direction: column;
-}
-.column {
-    padding-bottom: 5px;
-}
-.income-container .column p {
-    font-size: 23px;
-
-}
-
-.section-white-calcuator {
-    padding-bottom: 25px;
-}
-.slider-container label {
-    color: #323232;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 19px;
-    line-height: 28px;
-}
-span#calculatedAmount {
-    font-size: 26px;
-    margin-top: 29px;
-    display: block;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: -9px;
-}
-.slider-container p {
-    margin-bottom: 0;
-}
-}
-</style>
-
-
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const customerRange = document.getElementById('customerRange');
-    const customerValue = document.getElementById('customerValue');
-    const amountRange = document.getElementById('amountRange');
-    const amountValue = document.getElementById('amountValue');
-    const calculatedAmountMonthly = document.getElementById('calculatedAmountMonthly');
-    const calculatedAmountAnnual = document.getElementById('calculatedAmountAnnual');
-
-    function updateValue(slider, display) {
-        display.textContent = slider.value;
-    }
-
-    function formatNumber(number) {
-    const formattedNumber = number.toLocaleString('en-US');
-    return formattedNumber;
-    }
-
-
-
-    function calculateTotal() {
-        const customerAmount = parseFloat(customerRange.value);
-        const amount = parseFloat(amountRange.value);
-
-        // Calculate monthly income
-        const monthlyIncome = customerAmount * amount;
-        calculatedAmountMonthly.textContent = formatNumber(monthlyIncome);
-
-        // Calculate annual income (assuming 12 months in a year)
-        const annualIncome = monthlyIncome * 12;
-        calculatedAmountAnnual.textContent = formatNumber(annualIncome);
-    }
-
-    customerRange.addEventListener('input', function() {
-        updateValue(this, customerValue);
-        calculateTotal();
-    });
-
-    amountRange.addEventListener('input', function() {
-        updateValue(this, amountValue);
-        calculateTotal();
-    });
-
-    // Initial value update
-    updateValue(customerRange, customerValue);
-    updateValue(amountRange, amountValue);
-    calculateTotal();
-});
-
-
-</script></div></div></div></section>
+</section>
