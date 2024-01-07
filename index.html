@@ -200,8 +200,15 @@
                             "calculatedAmountAnnual"
                         );
 
-                        function updateValue(slider, display) {
-                            display.textContent = slider.value;
+                        function updateValue(slider, display, format) {
+
+                            if (format === "format") {
+
+                                display.textContent = formatNumber(parseFloat(slider.value));
+                            } else {
+
+                                display.textContent = slider.value
+                            }
                         }
 
                         function formatNumber(number) {
@@ -228,7 +235,7 @@
                         });
 
                         amountRange.addEventListener("input", function () {
-                            updateValue(this, amountValue);
+                            updateValue(this, amountValue, "format");
                             calculateTotal();
                         });
 
