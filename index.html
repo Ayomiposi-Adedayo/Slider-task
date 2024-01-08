@@ -8,7 +8,7 @@
     " class="caluculator-right-side center-white-calc">
         <div class="calculator-heading">
             <h3 class="heading-three _23">Revenue calculator</h3>
-            <h2 class="heading-two font-small">Simulate your earnings</h2>
+            <h2 class="heading-two font-small">Simulate your Campaign</h2>
             <p class="banner-para pargrarph black-text">
                 Even if you are a seasoned entrepreneur or starting from scratch, We
                 will empower you to succeed.
@@ -17,18 +17,17 @@
         <div class="custom-html">
             <div class="w-embed w-script">
                 <div class="slider-container">
-                    <label for="customerRange">Campaigns Per Month</label>
-                    <p><span id="customerValue">199</span> Campaigns</p>
-                    <input type="range" min="5" max="500" value="299" class="range-slider" id="customerRange" />
+                    <label for="customerRange">Spend</label>
+                    <p> <span style="color: #0773c4;">$</span><span id="customerValue">199</span> </p>
+                    <input type="range" min="0" max="5000" value="299" class="range-slider" id="customerRange" />
                 </div>
 
                 <div class="slider-container">
-                    <label for="amountRange">Total Reach</label>
+                    <label for="amountRange">Creators Per Campaign</label>
                     <!-- <span class="doller"></span> -->
 
-                    <p> <span style="color: #0773c4;">$</span><span id="amountValue">999</span></p>
-                    <input type="range" min="500" max="1000000" step="1" value="699" class="range-slider"
-                        id="amountRange" />
+                    <p> <span id="amountValue">999</span></p>
+                    <input type="range" min="5" max="100" step="1" value="699" class="range-slider" id="amountRange" />
                 </div>
 
                 <div class="income-container">
@@ -36,14 +35,14 @@
                         <p>
                             <span class="ddd">$</span><span id="calculatedAmountMonthly">498,501</span>
                         </p>
-                        <h3>Monthly Income</h3>
+                        <h3>Unique Content</h3>
                     </div>
-                    <!-- <div class="column">
+                    <div class="column">
                         <p>
                             <span class="ddd">$</span><span id="calculatedAmountAnnual">5,982,012</span>
                         </p>
-                        <h3>Annual Income</h3>
-                    </div> -->
+                        <h3>Content Views</h3>
+                    </div>
                 </div>
 
                 <style>
@@ -59,7 +58,7 @@
                     }
 
                     .income-container {
-
+                        display: flex;
                         max-width: 701px;
                         margin: 0 auto;
                         justify-content: space-between;
@@ -221,21 +220,21 @@
                             const amount = parseFloat(amountRange.value);
 
                             // Calculate monthly income
-                            const monthlyIncome = customerAmount * amount;
+                            const monthlyIncome = amount * 2 * (2 + (customerAmount / 1000))
                             calculatedAmountMonthly.textContent = formatNumber(monthlyIncome);
 
                             // Calculate annual income (assuming 12 months in a year)
-                            const annualIncome = monthlyIncome * 12;
-                            calculatedAmountAnnual.textContent = formatNumber(annualIncome);
+                            const annualIncome = Math.floor(customerAmount / 0.0012);
+                            calculatedAmountAnnual.textContent = annualIncome;
                         }
 
                         customerRange.addEventListener("input", function () {
-                            updateValue(this, customerValue);
+                            updateValue(this, customerValue, "format");
                             calculateTotal();
                         });
 
                         amountRange.addEventListener("input", function () {
-                            updateValue(this, amountValue, "format");
+                            updateValue(this, amountValue);
                             calculateTotal();
                         });
 
